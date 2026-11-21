@@ -630,6 +630,7 @@ void keyboard_interface_task(void) {
                     flow_start(&flow_tok);
                 }
 
+                LOG_DEBUG("Processing scancode: 0x%02X\n", scancode);
 #if USING_SET123
                 process_scancode(scancode, g_scancode_config);
 #else
